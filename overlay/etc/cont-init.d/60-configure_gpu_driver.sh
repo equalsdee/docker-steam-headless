@@ -1,4 +1,3 @@
-apt update && apt install make gcc -y
 
 # Fech NVIDIA GPU device (if one exists)
 if [ "${NVIDIA_VISIBLE_DEVICES:-}" == "all" ]; then
@@ -67,8 +66,8 @@ function install_nvidia_driver {
         --accept-license \
         --skip-depmod \
         --skip-module-unload \
-        #--no-kernel-modules \
-        #--no-kernel-module-source \
+        --no-kernel-module \
+        --no-kernel-module-source \
         --install-compat32-libs \
         --no-nouveau-check \
         --no-nvidia-modprobe \
