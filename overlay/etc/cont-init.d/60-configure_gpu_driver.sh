@@ -144,8 +144,8 @@ function install_deb_mesa {
     if [ ! -f /tmp/init-mesa-libs-install.log ]; then
         print_step_header "Enable i386 arch"
         dpkg --add-architecture i386
-        print_step_header "Add Debian SID sources"
-        echo "deb http://deb.debian.org/debian/ sid main" > /etc/apt/sources.list
+        #print_step_header "Add Debian SID sources"
+        #echo "deb http://deb.debian.org/debian/ sid main" > /etc/apt/sources.list
         apt-get update &>> /tmp/init-mesa-libs-install.log
         print_step_header "Install mesa vulkan drivers"
         echo "" >> /tmp/init-mesa-libs-install.log
